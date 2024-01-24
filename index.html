@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shifumi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="le_jeu">
+        <audio id="winSound">
+            <source src="assets/audio/YAHOO_SOUND_EFFECT_MARIO.mp3" type="audio/mp3">
+        </audio>
+        <audio id="nowinSound">
+            <source src="assets/audio/Mario_Fall_Waa_-_Sound_Effect_Full_HD_Mario_cri_Fou_Waa_-_Bruitage_Full_HD.mp3"
+                type="audio/mp3">
+        </audio>
+        <div class="scoreTotal">
+            <div class="trapeze">
+                <h1>
+                    <span id="moi">0</span>
+                    <span>:</span>
+                    <span id="ordi">0</span>
+                </h1>
+
+            </div>
+        </div>
+        <h2>Partie <span id="nombrePartie">1</span></h2>
+        <main>
+            <div class="result">
+                <div>
+                    <p>Votre choix : <span id="userChoice"></span></p>
+                    <img src="assets/img/user-removebg-preview.png" alt="" width="25%">
+                </div>
+                <div class="cartes">
+                    <img src="assets/img/catre_pierre720x.webp" alt="" width="10%" onclick="playerChoice('Pierre')">
+                    <img src="assets/img/carte_feuil720x.webp" alt="" width="10%" onclick="playerChoice('Feuille')">
+                    <img src="assets/img/carte_scieaux720x.webp" alt="" width="10%" onclick="playerChoice('Ciseaux')">
+                </div>
+            </div>
+            <img src="assets/img/vs-removebg-preview.png" alt="" width="20%">
+            <div class="result">
+                <div>
+                    <p>Choix de l'ordinateur : <span id="computerChoice"></span></p>
+                    <img src="assets/img/user-removebg-preview.png" alt="" width="25%">
+                </div>
+                <div class="cartes">
+                    <img src="assets/img/carte_retournee.webp" alt="" width="8%">
+                    <img src="assets/img/carte_retournee.webp" alt="" width="8%">
+                    <img src="assets/img/carte_retournee.webp" alt="" width="8%">
+                </div>
+            </div>
+        </main>
+        <p class="afficheResultat">Résultat : <span id="resultText"></span></p>
+        <div class="recommencer">
+            <button class="monBouton" onclick="restartGame()" id="restartButton"><span
+                    class="texte">Restart</span></button>
+        </div>
+        <script src="assets/js/script.js" async></script>
+        
+    </div>
+
+    <div class="finJeu">
+        <div class="image-container">
+            <div class="deafet">
+                <img id="deafet_img" src="assets/img/Mario_(Defeated)_-_Super_Mario_Sticker.gif" alt="Victoire 1"><br>
+                <audio class="deafet" src="asset/song/Mario Death - Sound Effect (HD).mp3"></audio>
+            </div>
+            <div class="Victoire">
+                <img id="Victoire_img " src="assets/img/photofunky.gif" alt="Victoire 2">
+                <audio class="Victoire" src="asset/song/Super Mario Bros. Music - Level Complete.mp3"></audio>
+            </div>
+        </div>
+        <script src="assets/js/script.js" async></script>
+    </div>
+    
+</body>
+
+</html>
