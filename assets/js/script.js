@@ -289,6 +289,8 @@ bouton.addEventListener('click', function () {
     // Rend invisible div1 et visible div2
     div3.style.display = 'none';
     div4.style.display = 'block';
+    document.getElementById('userChoice').innerText = '';
+    document.getElementById('computerChoice').innerText = '';
 });
 
 
@@ -304,10 +306,6 @@ bouton2.addEventListener('click', function () {
     // Rend invisible div1 et visible div2
     div1.style.display = 'none';
     div2.style.display = 'block';
+    document.getElementById('userChoice').innerText = '';
+    document.getElementById('computerChoice').innerText = '';
 });
-
-
-
-
-
-
