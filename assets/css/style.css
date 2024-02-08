@@ -197,7 +197,8 @@ h1 {
 
 body {
     background-image: url(../img/fond_du_jeu.jpg);
-    size: cover;
+    background-size: cover;
+    height: 100vh;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     width: 100%;
@@ -417,6 +418,120 @@ h3 {
 
 .score{
     margin-top: 10px;
-
 }
 
+
+@media screen and (max-width: 768px) {
+    #accueil {
+        width: 100%;
+        height: fit-content;
+    }
+
+    header {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .carousel {
+        margin-top: 20%;
+    }
+
+    .slides img {
+        width: 70%;
+    }
+
+    .prev,
+    .next {
+        margin: 0;
+    }
+
+    .prev {
+        margin-left: 30px;
+    }
+
+    .next {
+        margin-right: 30px;
+    }
+
+    #pseudo {
+        margin: 20px;
+    }
+
+    #pseudo input {
+        padding: 5px;
+    }
+
+    #valid {
+        padding-top: 30px;
+    }
+
+    #valid input {
+        padding: 10px 30px;
+    }
+
+    #jeu-final {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .me,
+    .computer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .result p {
+        display: flex;
+        align-items: center;
+    }
+
+    .cartes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cartes img {
+        width: 13%;
+    }
+
+    #img-vs {
+        width: 40%;
+    }
+
+    .scoreTotal {
+        margin-top: -20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .result p span {
+        font-size: 1em;
+    }
+
+    .cartes {
+        margin-top: -15px;
+    }
+
+    #align {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .monBouton,
+    .monBoutonAccueil {
+        width: 150px;
+    }
+}
