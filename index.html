@@ -49,7 +49,7 @@
                         <label class="detail" for="name"></label>
                         <input type="text" id="name" name="name" placeholder="Pseudo" required>
                     </div>
-                    <div id="valid">
+                    <div id="valid" onclick="showSecondPage()">
                         <input type="submit" id="bouton" value="Valider" onclick="showSecondPage()">
                     </div>
                 </div>
@@ -91,7 +91,7 @@
             </div>
             <section id="jeu-final">
                 <div class="result">
-                    <div>
+                    <div class="me">
                         <p>Votre choix : <span id="userChoice"></span></p>
                         <img id="avatar" src="assets/img/mario.jpg" alt="" width="50%">
                         <div id="pseudoDisplay"></div>
@@ -103,9 +103,9 @@
                             onclick="playerChoice('Ciseaux')">
                     </div>
                 </div>
-                <img id="img-vs" src="assets/img/vs-removebg-preview.png" alt="" width="60%" height="60%">
+                <img id="img-vs" src="assets/img/vs-removebg-preview.png" alt="" width="30%" height="30%">
                 <div class="result">
-                    <div>
+                    <div class="computer">
                         <p>IA : <span id="computerChoice"></span></p>
                         <img id="avatar-IA" src="assets/img/mario.jpg" alt="" width="40%">
                         <div id="pseudoIA"></div>
@@ -165,7 +165,7 @@
 
         <div class="modal">
             <button class="close-modal modal-trigger">X</button>
-            <img src="assets/img/règles du jeu/règles du jeu.png" alt="règle_du_jeux">
+            <img src="assets/img/règles du jeu/règles du jeu.png" alt="règle_du_jeux">
         </div>
     </div>
     <div id="regle">
