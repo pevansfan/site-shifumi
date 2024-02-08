@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- JS -->
+    <script defer src="assets/js/script.js"></script>
+    <!-- POLICE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- PICTOGRAMME -->
+    <script src="https://kit.fontawesome.com/99928b2ffa.js" crossorigin="anonymous"></script>
+    <title>Pierre Feuille Ciseaux</title>
+</head>
+
+<body>
+
+    <!-- PREMIERE PAGE -->
+    <div id="accueil">
+        <header>
+            <h1>Pierre Feuille Ciseaux</h1>
+        </header>
+
+        <main>
+            <section>
+
+                <!-- CAROUSEL -->
+                <div class="carousel">
+
+                    <div class="slides">
+                        <img src="assets/img/mario.jpg" alt="avatar_Mario">
+                        <img src="assets/img/luigi.jpg" alt="avatar_Luigi">
+                        <img src="assets/img/peach.jpg" alt="avatar_Peach">
+                        <img src="assets/img/yoshi.jpg" alt="avatar_Yoshi">
+                    </div>
+                    <button class="prev" onclick="prevSlide()">❮</button>
+                    <button class="next" onclick="nextSlide()">❯</button>
+
+                </div>
+
+
+                <div id="text">
+                    <!-- PSEUDO -->
+                    <div id="pseudo">
+                        <label class="detail" for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Pseudo" required>
+                    </div>
+                    <div id="valid">
+                        <input type="submit" id="bouton" value="Valider" onclick="showSecondPage()">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+
+    <!-- DEUXIEME PAGE -->
+    <aside>
+        <div id="shifumi" style="display: none;">
+            <audio id="winSound">
+                <source src="assets/audio/YAHOO_SOUND_EFFECT_MARIO.mp3" type="audio/mp3">
+            </audio>
+            <audio id="nowinSound">
+                <source
+                    src="assets/audio/Mario_Fall_Waa_-_Sound_Effect_Full_HD_Mario_cri_Fou_Waa_-_Bruitage_Full_HD.mp3"
+                    type="audio/mp3">
+            </audio>
+            <audio id="egaliteSound">
+                <source src="assets/audio/Mario_Jump_Sound_Effect.mp3" type="audio/mp3">
+            </audio>
+            <div class="scoreTotal">
+                <div class="trapeze">
+                    <h2>
+                        <span id="moi">0</span>
+                        <span>:</span>
+                        <span id="ordi">0</span>
+                    </h2>
+
+                </div>
+            </div>
+            <h3>Partie <span id="nombrePartie">1</span></h3>
+            <div class="choices">
+                <button onclick="playerChoice('Pierre')">Pierre</button>
+                <button onclick="playerChoice('Feuille')">Feuille</button>
+                <button onclick="playerChoice('Ciseaux')">Ciseaux</button>
+            </div>
+            <section id="jeu-final">
+                <div class="result">
+                    <div>
+                        <p>Votre choix : <span id="userChoice"></span></p>
+                        <img id="avatar" src="assets/img/mario.jpg" alt="" width="50%">
+                        <div id="pseudoDisplay"></div>
+                    </div>
+                    <div class="cartes">
+                        <img src="assets/img/catre_pierre720x.webp" alt="" width="22%" onclick="playerChoice('Pierre')">
+                        <img src="assets/img/carte_feuil720x.webp" alt="" width="22%" onclick="playerChoice('Feuille')">
+                        <img src="assets/img/carte_scieaux720x.webp" alt="" width="22%"
+                            onclick="playerChoice('Ciseaux')">
+                    </div>
+                </div>
+                <img id="img-vs" src="assets/img/vs-removebg-preview.png" alt="" width="60%" height="60%">
+                <div class="result">
+                    <div>
+                        <p>IA : <span id="computerChoice"></span></p>
+                        <img id="avatar-IA" src="assets/img/mario.jpg" alt="" width="40%">
+                        <div id="pseudoIA"></div>
+                    </div>
+                    <div class="cartes">
+                        <img src="assets/img/carte_retournee.webp" id="carte1" alt="" width="17%">
+                        <img src="assets/img/carte_retournee.webp" id="carte2" alt="" width="17%">
+                        <img src="assets/img/carte_retournee.webp" id="carte3" alt="" width="17%">
+                    </div>
+                </div>
+
+            </section>
+            <p class="afficheResultat">Résultat <span id="resultText"></span></p>
+
+        </div>
+    </aside>
+
+
+
+    <!-- TROISIEME PAGE -->
+
+    <div id="fin" style="display: none;">
+        <div class="image-container">
+            <div class="deafet">
+                <img id="deafet_img" src="assets/img/Mario_(Defeated)_-_Super_Mario_Sticker.gif" alt="Victoire">
+                <audio id="deafet_song" src="assets/audio/Mario_Death_-_Sound_Effect_HD.mp3"></audio>
+            </div>
+            <div class="Victoire">
+                <img id="Victoire_img" src="assets/img/photofunky.gif" alt="Victoire">
+                <audio id="Victoire_song" src="assets/audio/Super_Mario_Bros._Music_-_Level_Complete.mp3"></audio>
+            </div>
+            <div class="egalite">
+                <img id="egalite_img" src="assets/img/toads.gif" alt="egalite">
+                <audio id="egalite_song" src="assets/audio/Mario_Jump_Sound_Effect.mp3"></audio>
+            </div>
+        </div>
+        <div id="align">
+            <div class="recommencer">
+                <button class="monBouton" onclick="restartGame()" id="restartButton"><span
+                        class="texte">REJOUER</span></button>
+            </div>
+            <div>
+                <button class="monBoutonAccueil" onclick="restartGame()" id="restartButton2"><span
+                        class="texte2">ACCUEIL</span></button>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+
+     <!-- RÈGLES DU JEU avec une fênetre modale -->
+     <div class="modal-container">
+
+        <div class="overlay-modal modal-trigger"></div>
+
+        <div class="modal">
+            <button class="close-modal modal-trigger">X</button>
+            <img src="assets/img/règles du jeu/règles du jeu.png" alt="règle_du_jeux">
+        </div>
+    </div>
+    <div id="regle">
+        <button class="modal-button modal-trigger">Règles du jeu</button>
+    </div>
+
+</body>
+
+</html>
